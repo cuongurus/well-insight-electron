@@ -2,22 +2,25 @@
   "name": "well-insight-electron",
   "version": "1.0.0",
   "description": "well insight electron app",
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-builder": "^19.16.0"
+  },
   "scripts": {
-    "postinstall": "cd app && npm install",
+    "postinstall": "cd app && npm install && gulp pre",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd app && gulp build",
     "prestart": "npm run build",
     "start": "electron app",
     "pack": "npm run build && build --dir",
-    "dist": "npm run build && build --ia32 --x64"
+    "dist": "npm run build && build --ia32 --x64",
+    "clean": "cd app && gulp clean"
   },
   "build": {
     "appId": "co.uet.well_insight",
     "asar": true,
     "linux": {
-      "target": [
-        {
+      "target": [{
           "target": "deb",
           "arch": [
             "ia32",
@@ -41,13 +44,19 @@
       ]
     },
     "win": {
-      "target": [
-        "portable"
-      ]
+      "target": [{
+        "target": "nsis",
+        "arch": [
+          "ia32",
+          "x64"
+        ]
+      }],
+      "icon": "build/icon.ico"
     },
     "mac": {
+      "target": ["dmg"],
       "category": "public.app-category.developer-tools",
-      "extendInfo": "build/Info.plist"
+      "icon": "build/icon.icns"
     }
   },
   "repository": {
