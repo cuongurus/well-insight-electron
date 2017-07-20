@@ -26,22 +26,9 @@
             "ia32",
             "x64"
           ]
-        },
-        {
-          "target": "AppImage",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
-        },
-        {
-          "target": "rpm",
-          "arch": [
-            "ia32",
-            "x64"
-          ]
         }
-      ]
+      ],
+      "icon": "build/icons"
     },
     "win": {
       "target": [{
@@ -67,7 +54,9 @@
     "type": "git",
     "url": "git+https://github.com/cuongurus/well-insight-electron.git"
   },
-  "author": "cuongurus",
+  "author": {
+    "name": "cuongurus",
+    "email": "cuongnd95@live.com"},
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cuongurus/well-insight-electron/issues"
