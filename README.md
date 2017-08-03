@@ -17,7 +17,7 @@ git submodule update
 
 # Install dependencies
 npm install
-
+npm install -g browserify
 # Run the app
 npm start
 
