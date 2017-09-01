@@ -15,6 +15,10 @@ git submodule init
 # Clone the submodule
 git submodule update
 
+# Update submodule to lasted version
+cd app
+git pull origin master
+
 # Install dependencies
 npm install
 npm install -g browserify
