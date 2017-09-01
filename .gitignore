@@ -1,3 +1,11 @@
 node_modules
 npm-debug.log
 dist
+
+
+# VSCode
+.vscode
+
+# Yarn
+yarn.lock
+yarn-error.log
